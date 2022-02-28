@@ -1,0 +1,55 @@
+
+<h4>Template for 5-day forecast page:</h4>
+<div class="container-fluid">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">5-day forecast for Rancho Cordova</h3>
+    </div>
+    <ul class="list-group">
+      <!---->
+      <li class="list-group-item">
+        {{ day1 }}, {{ mon1 }} {{ date1 }}: {{ccond1}} - Min: {{temp_max1}} - Max: {{temp_max1}}
+
+        <img
+          class="icon"
+          [src]="img1"
+        />
+      </li>
+      <li class="list-group-item">
+        {{ day2 }}, {{ mon2 }} {{ date2 }}: {{ccond2}} - Min: {{temp_max2}} - Max: {{temp_max2}}
+
+        <img
+          class="icon"
+          [src]="img2"
+        />
+      </li>
+      <li class="list-group-item">
+        {{ day3 }}, {{ mon3 }} {{ date3 }}: {{ccond3}} - Min: {{temp_max3}} - Max: {{temp_max3}}
+
+        <img
+          class="icon"
+          [src]="img3"
+        />
+      </li>
+      <li class="list-group-item">
+        {{ day4 }}, {{ mon4 }} {{ date4 }}: {{ccond4}} - Min: {{temp_max4}} - Max: {{temp_max4}}
+
+        <img
+          class="icon"
+          [src]="img4"
+        />
+      </li>
+      <li class="list-group-item">
+        {{ day5 }}, {{ mon5 }} {{ date5 }}: {{ccond5}} - Min: {{temp_max5}} - Max: {{temp_max5}}
+
+        <img
+          class="icon"
+          [src]="img5"
+        />
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-success" routerLink="/" tabindex="0" id="mainPageBtn">
+    &lt; Back to main page
+  </button>
+</div>

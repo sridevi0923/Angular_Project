@@ -1,0 +1,36 @@
+
+<h4>Template for main page:</h4>
+<div class="container-fluid">
+  <div class="well">
+    <h2>Enter a zipcode:</h2>
+    <input class="form-control" placeholder="Zipcode" [(ngModel)]="zipCode" type="text" name="code"
+      id="addLocation"
+    />
+    <br />
+    <button
+      class="btn btn-primary"
+      id="addLocationBtn"
+      (click)="setZip(zipCode)"
+    >
+      Add location
+    </button>
+  </div>
+  <div *ngFor="let ele of arra1">
+    <div class="well flex">
+      <div>
+        <h3>Rancho Cordova ({{ ele.id }})</h3>
+        <h4>Current conditions: {{ ele.ccond }}</h4>
+        <h4>Temperatures today:</h4>
+        <p>Current {{ ele.temp }} - Max {{ ele.temp_max }} - Min {{ ele.temp_min }}</p>
+        <p>
+          <a [routerLink]="idna(ele.id)" (click)="idan(ele.id)" >Show 5-day forecast for Rancho Cordova</a>
+        </p>
+      </div>
+      <div>
+        <span class="close" (click)="sub(ele.id)">×</span>
+        <img [src]="imgna(ele.ccond)">
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
